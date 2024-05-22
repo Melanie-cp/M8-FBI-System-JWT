@@ -1,0 +1,14 @@
+DROP TABLE IF EXISTS USERS;
+
+CREATE TABLE USERS(
+	UID SERIAL PRIMARY KEY, 
+    EMAIL VARCHAR(100) NOT NULL UNIQUE,
+    PASSWORD VARCHAR(100) NOT NULL
+);
+
+INSERT INTO USERS (EMAIL, PASSWORD) VALUES
+('who@fbi.com', 'me'),
+('where@fbi.com', 'there'),
+('how@fbi.com', 'exactly');
+
+SELECT * FROM USERS;
